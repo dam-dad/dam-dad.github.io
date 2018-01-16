@@ -1,3 +1,6 @@
+---
+title: Inicio
+---
 - Creación de interfaces
 - Usabilidad
 - Informes

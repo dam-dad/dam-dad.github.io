@@ -1,5 +1,5 @@
 ---
-name: GIT
+title: GIT
 description: Sistema de control de versiones
 ---
 # GIT
