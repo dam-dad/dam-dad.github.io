@@ -1,5 +1,6 @@
-theme: minima
-title: DAD
+lang: es-ES
+remote_theme: mmistakes/jekyll-theme-basically-basic
+title: Desarrollo de Interfaces
 description: Apuntes, tutoriales y actividades del módulo profesional Desarrollo de Interfaces de 2ºDAM.
-author: Fran Vargas
-tags: [dad,dam,apuntes,tutoriales,actividades,javafx]
+author: 
+  name: Fran Vargas
