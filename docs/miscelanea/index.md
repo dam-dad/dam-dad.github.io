@@ -1,4 +1,0 @@
-﻿---
-title: Miscelánea
----
-- [GIT](git)
