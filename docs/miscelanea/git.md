@@ -72,6 +72,12 @@ Para consultar la configuración de un repositorio debemos situarnos dentro del 
 git config --local --list
 ```
 
+### Acciones con GIT
+
+![Fetch, Merge y Pull](imagenes/git-pull-fetch.png)
+
+
+
 ### Crear un repositorio
 
 #### Repositorio nuevo
