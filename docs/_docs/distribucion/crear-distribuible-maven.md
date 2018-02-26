@@ -89,7 +89,3 @@ Donde:
      Ahora sólo debemos distribuir el contenido del directorio `HolaMundoFXML`, o alguno de los instaladores generados (`HolaMundoFXML-1.0.exe` generado con **InnoSetup**, u `HolaMundoFXML-1.0.msi` generado con **Wix**) dentro de `native`.
 
    >  Destacar que cuando se instale la aplicación, se instalará en el equipo el mismo contenido que hay en el directorio `target/jfx/native/HolaMundoFXML`.
-
-   ​
-
-   ​
