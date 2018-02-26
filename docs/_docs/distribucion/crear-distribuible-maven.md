@@ -70,13 +70,13 @@ Donde:
 
 2. Ejecutar con Maven el objetivo `package` desde la opción del menú "Run" > "Run as" > "Maven build...".
 
-   ![Maven Package Goal](imagenes/maven-package-goal.png)
+![Maven Package Goal](imagenes/maven-package-goal.png)
 
-   > Es recomendable hacer un `clean` antes de `package`.
+> Es recomendable hacer un `clean` antes de `package`.
 
-   Tras unos segundos, se generarán los siguientes artefactos en el directorio `target` de nuestro proyecto:
+Tras unos segundos, se generarán los siguientes artefactos en el directorio `target` de nuestro proyecto:
 
-   ![Artefactos generados](imagenes/artefactos-generados.png)
+![Artefactos generados](imagenes/artefactos-generados.png)
 
 3. Distribuir la aplicación:
 
@@ -87,5 +87,5 @@ Donde:
    * **Directorio `native`:** aquí se generan los distribuibles nativos (en este caso, para Windows).
 
      Ahora sólo debemos distribuir el contenido del directorio `HolaMundoFXML`, o alguno de los instaladores generados (`HolaMundoFXML-1.0.exe` generado con **InnoSetup**, u `HolaMundoFXML-1.0.msi` generado con **Wix**) dentro de `native`.
-
-   >  Destacar que cuando se instale la aplicación, se instalará en el equipo el mismo contenido que hay en el directorio `target/jfx/native/HolaMundoFXML`.
+ 
+> Destacar que cuando se instale la aplicación, se instalará en el equipo el mismo contenido que hay en el directorio `target/jfx/native/HolaMundoFXML`.
