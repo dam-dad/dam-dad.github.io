@@ -1,6 +1,10 @@
 - title: Inicio
   docs:
   - home
+
+- title: Distribución
+  docs:
+  - distribucion/crear-distribuible-maven
   
 - title: Miscelánea
   docs:
