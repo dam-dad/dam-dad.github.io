@@ -2,15 +2,17 @@
 title: Crear un distribuible con Maven
 ---
 
-En este guía se explica el proceso para crear un ejecutable (.EXE) y dos tipos de intaladores de una aplicación Java.
+En este guía se explica el proceso para crear un ejecutable (.EXE) e intaladores de una aplicación Java para poder distribuirla.
 
-La siguiente guía ha sido probada en el siguiente entorno:
+## Entorno
+
+El entorno en el que se han realizado las pruebas es el siguiente:
 
 * **Windows 10 Enterprise**
 * **Eclipse Oxygen.2 Release (4.7.2)**
 * **Java JDK 1.8.0_144**
 
-Para generar los instaladores es necesario disponer de las siguientes aplicaciones:
+Para generar los instaladores en Windows es necesario disponer de las siguientes aplicaciones:
 
 * [**Inno Setup**](http://www.jrsoftware.org/isdl.php): si queremos generar un asistente de instalación (EXE).
 * [**WIX**](http://wixtoolset.org/): si queremos generar un instalador de tipo Microsoft Installer (MSI).
@@ -23,9 +25,11 @@ Como ejemplo, se va a usar el siguiente proyecto:
 
 ![Proyecto HolaMundoFXML](imagenes/proyecto-holamundofxml.png)
 
-Es necesario que nuestro proyecto de Eclipse sea de tipo Maven, pues se va a usar [`javafx-maven-plugin`](https://github.com/javafx-maven-plugin/javafx-maven-plugin), que a su vez usa la herramienta `javapackager` incluida en el JDK.
+Es necesario que el proyecto sea de tipo Maven para poder usar [`javafx-maven-plugin`](https://github.com/javafx-maven-plugin/javafx-maven-plugin), que a su vez hace uso de la herramienta `javapackager` incluida en el JDK.
 
-A continuación hay que seguir los siguientes pasos:
+## Procedimiento 
+
+Los pasos a seguir son los siguientes:
 
 1. Añadir el siguiente fragmento al `pom.xml` del proyecto dentro de la etiqueta `plugins`:
 
@@ -66,7 +70,7 @@ A continuación hay que seguir los siguientes pasos:
 
     > Existen más propiedades que podemos añadir a la etiqueta `configuration`. Destacar también que existe un generador de configuraciones disponible en el siguiente [enlace](http://javafx-maven-plugin.github.io/).
 
-2. Ejecutar con Maven el objetivo `package` desde la opción del menú "Run" > "Run as" > "Maven build...".
+1. Ejecutar con Maven el objetivo `package` desde la opción del menú "Run" > "Run as" > "Maven build...".
 
     ![Maven Package Goal](imagenes/maven-package-goal.png)
 
@@ -84,6 +88,12 @@ A continuación hay que seguir los siguientes pasos:
 
     * **Directorio `native`:** aquí se generan los distribuibles nativos (en este caso, para Windows).
 
- Ahora sólo debemos distribuir el contenido del directorio `HolaMundoFXML`, o alguno de los instaladores generados (`HolaMundoFXML-1.0.exe` generado con **InnoSetup**, u `HolaMundoFXML-1.0.msi` generado con **Wix**) dentro de `native`.
+Ahora sólo debemos distribuir el contenido del directorio `HolaMundoFXML`, o alguno de los instaladores generados (`HolaMundoFXML-1.0.exe` generado con **InnoSetup**, u `HolaMundoFXML-1.0.msi` generado con **Wix**) dentro de `native`.
 
 > Destacar que cuando se instale la aplicación, se instalará en el equipo el mismo contenido que hay en el directorio `target/jfx/native/HolaMundoFXML`.
+
+## Configuración del plugin
+
+Para obtener una lista detallada de las opciones que podemos utilizar para configurar el plugin ejecutamos Maven con el objetivo  `jfx:help -Ddetail=true`.
+
+![Maven jfx:help Goal](imagenes/maven-jfx-help-goal.png)
