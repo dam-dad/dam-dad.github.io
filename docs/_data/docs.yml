@@ -5,6 +5,10 @@
 - title: Distribución
   docs:
   - distribucion/crear-distribuible-maven
+
+- title: Entorno
+  docs:
+  - entorno/instalar-efxclipse-plugin-photon
   
 - title: Miscelánea
   docs:
