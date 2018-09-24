@@ -9,7 +9,7 @@
 - title: Entorno
   docs:
   - entorno/instalar-efxclipse-plugin-photon
-  - entorno/configurar-javadoc-eclipse.md
+  - entorno/configurar-javadoc-eclipse
 
 - title: Miscelánea
   docs:
