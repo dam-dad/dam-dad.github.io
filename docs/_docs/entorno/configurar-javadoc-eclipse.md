@@ -8,9 +8,9 @@ A continuación se explican los pasos para poder explorar los fuentes de las lib
 
 2. Copiamos el fichero descargado dentro de la carpeta del JDK. En mis caso: 
 
-   ```bash
-   C:\Program Files\Java\jdk-10.0.2\jdk-10.0.2_doc-all.zip
    ```
+   C:\Program Files\Java\jdk-10.0.2\jdk-10.0.2_doc-all.zip
+   ``` ¡
 
 3. En Eclipse, abrimos **Windows > Preferences**, y buscamos **Java > Installed JREs**.
 
