@@ -1,5 +1,5 @@
 ---
-title: Crear un distribuible con Maven
+title: Crear un distribuible con Maven para Java 8
 ---
 
 En este guía se explica el proceso para crear un ejecutable (.EXE) e intaladores de una aplicación Java para poder distribuirla.
@@ -23,7 +23,7 @@ Para generar los instaladores en Windows es necesario disponer de las siguientes
 
 Como ejemplo, se va a usar el siguiente proyecto:
 
-![Proyecto HolaMundoFXML](imagenes/proyecto-holamundofxml.png)
+![Proyecto HolaMundoFXML](crear-distribuible-maven-jdk8/proyecto-holamundofxml.png)
 
 Es necesario que el proyecto sea de tipo Maven para poder usar [`javafx-maven-plugin`](https://github.com/javafx-maven-plugin/javafx-maven-plugin), que a su vez hace uso de la herramienta `javapackager` incluida en el JDK.
 
@@ -72,13 +72,13 @@ Los pasos a seguir son los siguientes:
 
 1. Ejecutar con Maven el objetivo `package` desde la opción del menú "Run" > "Run as" > "Maven build...".
 
-    ![Maven Package Goal](imagenes/maven-package-goal.png)
+    ![Maven Package Goal](crear-distribuible-maven-jdk8/maven-package-goal.png)
 
     > Es recomendable hacer un `clean` antes de `package`.
 
     Tras unos segundos, se generarán los siguientes artefactos en el directorio `target` de nuestro proyecto:
 
-    ![Artefactos generados](imagenes/artefactos-generados.png)
+    ![Artefactos generados](crear-distribuible-maven-jdk8/artefactos-generados.png)
 
 3. Distribuir la aplicación:
 
@@ -96,4 +96,4 @@ Ahora sólo debemos distribuir el contenido del directorio `HolaMundoFXML`, o al
 
 Para obtener una lista detallada de las opciones que podemos utilizar para configurar el plugin ejecutamos Maven con el objetivo  `jfx:help -Ddetail=true`.
 
-![Maven jfx:help Goal](imagenes/maven-jfx-help-goal.png)
+![Maven jfx:help Goal](crear-distribuible-maven-jdk8/maven-jfx-help-goal.png)
