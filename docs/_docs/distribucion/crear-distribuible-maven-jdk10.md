@@ -60,24 +60,24 @@ Partimos del siguiente fichero `pom.xml` con las propiedades que se indican.
 Añadimos el siguiente fragmento dentro de `plugins` para **generar el fichero JAR ejecutable en le directorio `target`**:
 
 ```xml
- <plugin>
-     <groupId>org.apache.maven.plugins</groupId>
-     <artifactId>maven-jar-plugin</artifactId>
-     <version>3.1.1</version>
-     <configuration>
-         <archive>
-             <manifest>
-				<addClasspath>true</addClasspath>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.1.1</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
                 <!-- directorio relativo al jar con las librerías (dependencias) -->
-				<classpathPrefix>libs/</classpathPrefix>
+                <classpathPrefix>libs/</classpathPrefix>
                 <!-- clase principal del proyecto (método main) -->
-             	<mainClass>dad.holamundo.fxml.HolaMundoApp</mainClass>
-             </manifest>
-         </archive>
-         <!-- directorio donde se genera el jar (por defecto es 'target') -->
-         <outputDirectory>${project.build.directory}</outputDirectory>
-     </configuration>
- </plugin>
+                <mainClass>dad.holamundo.fxml.HolaMundoApp</mainClass>
+            </manifest>
+        </archive>
+        <!-- directorio donde se genera el jar (por defecto es 'target') -->
+        <outputDirectory>${project.build.directory}</outputDirectory>
+    </configuration>
+</plugin>
 ```
 
 Esto creará el fichero `target\HolaMundoFXML-0.0.1-SNAPSHOT.jar`.
