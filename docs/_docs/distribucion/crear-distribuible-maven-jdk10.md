@@ -25,7 +25,7 @@ Para generar los instaladores en Windows es necesario disponer de las siguientes
 
 Como ejemplo, se va a usar el siguiente proyecto disponible para su descarga en este [enlace](crear-distribuible-maven-jdk10/HolaMundoFXML.zip):
 
-![Proyecto HolaMundoFXML](crear-distribuible-maven-jdk11/image01.png)
+![Proyecto HolaMundoFXML](crear-distribuible-maven-jdk10/image01.png)
 
 Es necesario que el proyecto sea de tipo **Maven** para poder crear el distribuible.
 
@@ -159,7 +159,7 @@ Ahora crearemos un ejecutable para Windows a partir del fichero JAR usando Launc
 
 Creamos los directorios `assets\windows` en la raíz del proyecto, y copiamos el icono de la aplicación (.ico) dentro del directorio `windows`, tal y como se observa en la siguiente imagen:
 
-![Carpeta assets\windows](crear-distribuible-maven-jdk11/image02.png)
+![Carpeta assets\windows](crear-distribuible-maven-jdk10/image02.png)
 
 Añadimos el siguiente fragmento dentro de `plugins` para **generar el EXE en `target\app`**: 
 
@@ -222,7 +222,7 @@ Finalmente, generaremos un instalador que instale todo el contenido del director
 
 Lo primero será crear el fichero de configuración de Inno Setup (.iss), para lo que utilizamos la herramienta **Inno Setup Compiler**.
 
-![Inno Setup Compiler](D:\Users\fvarrui\Google Drive\ies\modulos\dad\git\docs\_docs\distribucion\crear-distribuible-maven-jdk11\image03.png)
+![Inno Setup Compiler](crear-distribuible-maven-jdk10\image03.png)
 
 Y el contenido deberá quedar más o menos como se muestra a continuación.
 
@@ -312,7 +312,7 @@ Esto creará el fichero `target\HolaMundoFXML_0.0.0-SNAPSHOT_setup.exe` con el a
 
 Por último, ejecutamos con Maven el objetivo `package` desde la opción del menú "Run" > "Run as" > "Maven build...", como se muestra en la siguiente imagen:
 
-![mvn package](crear-distribuible-maven-jdk11/image04.png)
+![mvn package](crear-distribuible-maven-jdk10/image04.png)
 
 O también podemos abrir CMD, desplazarnos al directorio raíz del proyecto y ejecutar el siguiente comando:
 
