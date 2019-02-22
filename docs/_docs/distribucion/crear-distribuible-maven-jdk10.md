@@ -11,15 +11,7 @@ El entorno en el que se han realizado las pruebas es el siguiente:
 * **Windows 10 Pro**
 * **Eclipse 2018.12 (4.10.0)**
 * **Oracle JDK 10.0.2**
-
-Para generar los instaladores en Windows es necesario disponer de las siguientes aplicaciones:
-
-* [**Inno Setup**](http://www.jrsoftware.org/isdl.php): si queremos generar un asistente de instalación (EXE).
-* [**WIX**](http://wixtoolset.org/): si queremos generar un instalador de tipo Microsoft Installer (MSI).
-
-> Son complementarias, por lo que si disponemos de ambas, Maven generará ambos artefactos.
-
-> Para que funcione WIX es necesario que su binario se encuentre en el PATH del sistema. 
+* [**Inno Setup**](http://www.jrsoftware.org/isdl.php)
 
 ## Proyecto de ejemplo: `HolaMundoFXML`
 
@@ -42,8 +34,11 @@ Partimos del siguiente fichero `pom.xml` con las propiedades que se indican.
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dad</groupId>
 	<artifactId>HolaMundoFXML</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
+    <name>HolaMundoFXML</name>
+    <description>Mi aplicación Hola Mundo</description>
+    
 	<properties>
         <!-- versión de java para la que se compilará el proyecto -->
 		<maven.compiler.source>10</maven.compiler.source>
@@ -80,7 +75,7 @@ Añadimos el siguiente fragmento dentro de `plugins` para **generar el fichero J
 </plugin>
 ```
 
-Esto creará el fichero `target\HolaMundoFXML-0.0.1-SNAPSHOT.jar`.
+Esto creará el fichero `target\HolaMundoFXML-0.0.1.jar`.
 
 ### 2. Copiar las dependencias del proyecto
 
@@ -119,7 +114,7 @@ Añadimos al `pom.xml` la variable `jre.path` con la ruta al directorio donde es
 <properties>
     [...]
     <!-- ruta donde se encuentra el JRE instalado -->
-    <jre.path>${env:PROGRAMFILES}\Java\jre-10.0.2</jre.path>
+    <jre.path>C:\Program Files\Java\jre-10.0.2</jre.path>
 	[...]
 </properties>
 ```
@@ -134,12 +129,12 @@ Y luego añadimos el siguiente `plugin` para **copiar el directorio indicado en 
     <executions>
         <execution>
             <id>copy-jre</id>
-            <phase>validate</phase>
+            <phase>prepare-package</phase>
             <goals>
                 <goal>copy-resources</goal>
             </goals>
             <configuration>
-                <outputDirectory>${project.build.directory}/target/app</outputDirectory>
+                <outputDirectory>${project.build.directory}/target/app/jre</outputDirectory>
                 <resources>          
                     <resource>
                         <directory>${jre.path}</directory>
@@ -244,8 +239,6 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=..\..\target
-OutputBaseFilename={#MyAppName}-{#MyAppVersion}-setup
 SetupIconFile={#MyAppName}.ico
 Compression=lzma
 SolidCompression=yes
@@ -289,6 +282,7 @@ Añadimos el siguiente `plugin` para **generar el instalador para Windows en `ta
                 <goal>exec</goal>
             </goals>
             <configuration>
+                <!-- compilador de inno setup (debe estar en el path) -->
                 <executable>iscc</executable>
                 <arguments>
                     <!-- directorio donde se guardará el instalador -->
@@ -304,7 +298,7 @@ Añadimos el siguiente `plugin` para **generar el instalador para Windows en `ta
 </plugin>
 ```
 
-Esto creará el fichero `target\HolaMundoFXML_0.0.0-SNAPSHOT_setup.exe` con el asistente de instalación de nuestra aplicación. 
+Esto creará el fichero `target\HolaMundoFXML_0.0.1_setup.exe` con el asistente de instalación de nuestra aplicación. 
 
 > Si ejecutamos el instalador, copiará todo el contenido de `target\app` en `Program files`.
 
