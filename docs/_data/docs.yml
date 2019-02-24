@@ -4,7 +4,8 @@
 
 - title: Distribución
   docs:
-  - distribucion/crear-distribuible-maven
+  - distribucion/crear-distribuible-maven-jdk8
+  - distribucion/crear-distribuible-maven-jdk10
 
 - title: Entorno
   docs:
