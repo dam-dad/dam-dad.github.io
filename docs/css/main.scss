@@ -5,24 +5,6 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
-
-/*
-@import
-  {% if site.bootwatch %}
-    "bootswatch/{{site.bootwatch | downcase}}/variables",
-  {% endif %}
-
-  "bootstrap",
-
-  {% if site.bootwatch %}
-    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
-  {% endif %}
-
-  "syntax-highlighting",
-  "typeahead"
-;
-*/
-
 html {
   position: relative;
   min-height: 100%;
