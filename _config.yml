@@ -1,1 +1,96 @@
+#
+# Site settings
+#
 remote_theme: LeakyAbstractions/pretty-docs
+url: https://dam-dad.github.io
+baseurl: /
+title: &site_title Desarrollo de Interfaces
+description: &site_description Apuntes, tutoriales y actividades del módulo profesional DAD de 2ºDAM.
+branding:
+  icon:
+    name: icon_documents_alt
+  highlight: Pretty
+  bold: Docs
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+  parse_block_html: true
+
+
+#
+# Owner
+#
+owner:
+  name: Francisco Vargas Ruiz
+  twitter: &site_owner_twitter fvarrui
+  copyright:
+    notice: Lorem Ipsum
+    author: "[Francisco Vargas Ruiz](https://github.com/fvarrui)"
+
+
+#
+# Social
+#
+open_graph:
+  title: *site_title
+  site_name: *site_title
+  description: *site_description
+  locale: es_ES
+  image: /assets/images/thumb.png
+twitter_cards:
+  title: *site_title
+  description: *site_description
+  creator: *site_owner_twitter
+  card: summary_large_image
+  image: /assets/images/thumb.png
+#share:
+#  facebook:
+#    class: fb-like
+#    action: like
+#    layout: button_count
+#    show-faces: false
+#    share: false
+#  twitter:
+#    via: *site_owner_twitter
+#    text: &site_description
+#    title: Tweet
+#  github:
+#    repo: LeakyAbstractions/pretty-docs
+#    position: right
+#    color: red
+
+
+# Google Analytics
+#google_analytics: UA-61670496-5
+
+#
+# Collections
+#
+collections:
+  doc:
+    output: true
+    permalink: /:path.html
+
+
+#
+# Default values
+#
+defaults:
+  -
+    scope:
+      path: ""
+      type: doc
+    values:
+      layout: doc
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: doc
