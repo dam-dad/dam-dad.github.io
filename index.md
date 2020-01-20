@@ -1,10 +1,8 @@
 ---
-layout: home
+layout: doc
 title: Inicio
 tagline: |
-  Apuntes, tutoriales y actividades del módulo profesional DAD
-  Designed with *&nbsp;*{: .fa .fa-heart} for developers
-  Ready to use in *&nbsp;*{: .fa .fa-github} Github Pages
+  Apuntes, tutoriales y actividades del módulo profesional DAD.
 heading: Desarrollo de interfaces
 navigation:
   - /entorno
