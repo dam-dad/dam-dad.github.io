@@ -8,7 +8,7 @@ title: &site_title Desarrollo de Interfaces
 description: &site_description Apuntes, tutoriales y actividades del módulo profesional DAD de 2ºDAM.
 branding:
   icon:
-    name: icon_documents_alt
+    name: icon_book_alt
   highlight: 
   bold: Desarrollo de Interfaces
 markdown: kramdown
