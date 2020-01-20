@@ -9,8 +9,9 @@ description: &site_description Apuntes, tutoriales y actividades del módulo pro
 branding:
   icon:
     name: icon_documents_alt
-  highlight: Pretty
-  bold: Docs
+  highlight: Desarrollo
+  bold: de
+  highlight: Interfaces
 markdown: kramdown
 kramdown:
   auto_ids: true
