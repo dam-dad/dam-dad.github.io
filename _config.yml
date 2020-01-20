@@ -28,27 +28,27 @@ kramdown:
 #
 owner:
   name: Francisco Vargas Ruiz
-  twitter: &site_owner_twitter fvarrui
-  copyright:
-    notice: Lorem Ipsum
-    author: "[Francisco Vargas Ruiz](https://github.com/fvarrui)"
+#  twitter: &site_owner_twitter fvarrui
+#  copyright:
+#    notice: Lorem Ipsum
+#    author: "[Francisco Vargas Ruiz](https://github.com/fvarrui)"
 
 
 #
 # Social
 #
-open_graph:
-  title: *site_title
-  site_name: *site_title
-  description: *site_description
-  locale: es_ES
-  image: /assets/images/thumb.png
-twitter_cards:
-  title: *site_title
-  description: *site_description
-  creator: *site_owner_twitter
-  card: summary_large_image
-  image: /assets/images/thumb.png
+#open_graph:
+#  title: *site_title
+#  site_name: *site_title
+#  description: *site_description
+#  locale: es_ES
+#  image: /assets/images/thumb.png
+#twitter_cards:
+#  title: *site_title
+#  description: *site_description
+#  creator: *site_owner_twitter
+#  card: summary_large_image
+#  image: /assets/images/thumb.png
 #share:
 #  facebook:
 #    class: fb-like
