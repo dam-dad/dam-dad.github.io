@@ -1,4 +1,6 @@
-# Crear un distribuible con Maven para Java 10
+---
+title: Crear un distribuible con Maven para Java 10
+---
 
 En este guía se explica el proceso para crear un ejecutable (.EXE) y un instalador de una aplicación Java para poder distribuirla.
 

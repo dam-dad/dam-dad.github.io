@@ -10,7 +10,7 @@ A continuación se explican los pasos para poder explorar los fuentes de las lib
 
    ```
    C:\Program Files\Java\jdk-10.0.2\jdk-10.0.2_doc-all.zip
-   ``` ¡
+   ```
 
 3. En Eclipse, abrimos **Windows > Preferences**, y buscamos **Java > Installed JREs**.
 

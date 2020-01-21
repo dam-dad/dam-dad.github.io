@@ -3,12 +3,13 @@
 #
 remote_theme: LeakyAbstractions/pretty-docs
 url: https://dam-dad.github.io
-baseurl: /
+baseurl: 
 title: &site_title Desarrollo de Interfaces
 description: &site_description Apuntes, tutoriales y actividades del módulo profesional DAD de 2ºDAM.
 branding:
   icon:
-    name: icon_book_alt
+    type: fa
+    name: fa-code
   highlight: 
   bold: Desarrollo de Interfaces
 markdown: kramdown
@@ -21,7 +22,6 @@ kramdown:
   hard_wrap: false
   footnote_nr: 1
   parse_block_html: true
-
 
 #
 # Owner

@@ -1,4 +1,6 @@
-# Crear un distribuible con Maven para Java 8
+---
+title: Crear un distribuible con Maven para Java 8
+---
 
 En este guía se explica el proceso para crear un ejecutable (.EXE) e intaladores de una aplicación Java para poder distribuirla.
 
