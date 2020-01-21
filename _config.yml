@@ -29,9 +29,9 @@ kramdown:
 owner:
   name: Francisco Vargas Ruiz
 #  twitter: &site_owner_twitter fvarrui
-#  copyright:
+  copyright:
 #    notice: Lorem Ipsum
-#    author: "[Francisco Vargas Ruiz](https://github.com/fvarrui)"
+    author: Creado por [Francisco Vargas Ruiz](https://github.com/fvarrui)
 
 
 #
