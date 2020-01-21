@@ -12,6 +12,8 @@ navigation:
 
 Bienvenid@ al repositorio de apuntes, tutoriales y actividades del módulo profesional DAD de 2ºDAM, impartido en el IES Domingo Pérez Minik.
 
+*&nbsp;*{: .fa .fa-cloud-download}
+
 <div class="cta-container">
 [*&nbsp;*{: .fa .fa-cloud-download} Download Now][PRETTYDOCS]{: .btn .btn-primary .btn-cta}
 [*&nbsp;*{: .fa .fa-github} Use in GitHub Pages][GHPAGES]{: .btn .btn-green .btn-primary .btn-cta}
