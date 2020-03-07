@@ -6,6 +6,7 @@ icon:
   name: fa-paper-plane
 color: green
 sections:
-  - /distribucion/crear-distribuible-maven-jdk8
-  - /distribucion/crear-distribuible-maven-jdk10
+  - /distribucion/crear-distribuible-maven-jdk8/index
+  - /distribucion/crear-distribuible-maven-jdk10/index
+  - /distribucion/como-publicar-tus-artefactos-en-maven-central/index
 ---
