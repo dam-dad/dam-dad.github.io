@@ -17,6 +17,6 @@ bundle exec jekyll serve --incremental
 3. Acceder con el navegador a la siguiente URL:
 
 ```
-http://localhost:4000/AppInventor
+http://localhost:4000/dam-dad.github.io
 ```
 

@@ -42,8 +42,8 @@ Podemos descargar GIT para Windows, GNU/Linux o Mac OS X desde el siguiente [enl
 Establecer nombre de usuario y correo electrónico:
 
 ```bash
-git config --global user.name "Fran Vargas"
-git config --global user.email fvargas@ejemplo.com
+git config --global user.name "tu nombre"
+git config --global user.email "tu@email.es"
 ```
 
 > En Windows, las credenciales de acceso al repositorio remoto se almacenan en el "Administrador de credenciales" del "Panel de control".
