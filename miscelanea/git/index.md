@@ -1,6 +1,4 @@
----
-title: GIT
----
+# GIT
 
 El control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante. Cualquier tipo de archivo puede ponerse bajo control de versiones.
 
@@ -14,7 +12,7 @@ Un repositorio está formado por tres árboles o estados locales:
 2. **Staging area (área de cambios)**: zona intermedia donde registramos los ficheros modificados (staged), y los preparamos para la próxima confirmación (commit).
 3. **Repository (repositorio Git):** donde se almacenan los cambios confirmados.
 
-![Local Operations](imagenes/git-local-operations.png)
+<img src="git-local-operations.png" alt="Local Operations" style="zoom: 80%;" />
 
 ## Ciclo de vida de los ficheros 
 
@@ -29,7 +27,7 @@ Un fichero puede estar en cualquiera de los siguientes estados:
   - `git reset` para deshacer los cambios preparados en el Stage.
 - **staged (preparado):** se ha preparado el fichero para que sus cambios formen parte del próximo `commit`. Cuando se haga el `commit` (se confirmen los cambios del Stage) el fichero pasará de nuevo a `unmodified`.
 
-![File Status Lifecycle](imagenes/git-file-status-lifecycle.png)
+<img src="git-file-status-lifecycle.png" alt="File Status Lifecycle" style="zoom:80%;" />
 
 ## Cómo usar GIT desde la línea de comandos
 
@@ -50,7 +48,7 @@ git config --global user.email "tu@email.es"
 
 ### Comprobar la configuración
 
-Para reviar la configuración que tenemos establecida para GIT usamos el siguiente comando:
+Para revisar la configuración que tenemos establecida para GIT usamos el siguiente comando:
 
 ```bash
 git config --list
@@ -76,7 +74,7 @@ git config --local --list
 
 ### Acciones con GIT
 
-![Fetch, Merge y Pull](imagenes/git-pull-fetch.png)
+<img src="git-pull-fetch.png" alt="Fetch, Merge y Pull" style="zoom:80%;" />
 
 
 
@@ -92,7 +90,7 @@ git init
 
 Esto creará en el directorio actual el directorio `.git` con toda la información del repositorio local.
 
-####Copiar un repositorio remoto
+#### Copiar un repositorio remoto
 
 Para crear una copia local de un repositorio remoto (*clone*), nos situamos en el directorio donde queremos que se haga la copia y ejecutamos el siguiente comando:
 
