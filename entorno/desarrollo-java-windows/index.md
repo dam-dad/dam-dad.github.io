@@ -1,4 +1,4 @@
-# Cómo preparar tu entorno de desarrollo Java en Windows
+# Cómo preparar un entorno de desarrollo Java en Windows
 
 A continuación se explica como preparar tu sistema Windows de forma rápida y sencilla para desarrollar en Java.
 
@@ -33,7 +33,7 @@ choco install -y adoptopenjdk14
 
 > Si instalamos el paquete `adoptopenjdk` (sin concatenarle el número de versión de Java), se instalará la última versión disponible.
 
-## Instalar Eclipse
+## Instalar Eclipse for Java developers
 
 Instalamos la edición de Eclipse para desarrolladores Java (Eclipse for Java developers), versión 2019.12.
 
@@ -43,7 +43,7 @@ Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 choco install -y eclipse-java-oxygen --version=2019.12
 ```
 
-> Si obviamos la versión en el comando anterior, se instalará la última versión de Eclipse disponible.
+> Si obviamos la versión (`--version=2019.12`) en el comando anterior, se instalará la última versión de Eclipse disponible.
 
 ## Instalar Maven
 
