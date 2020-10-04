@@ -110,9 +110,41 @@ PruebaMaven
                         AppTest.java
 ```
 
+## POM (Project Object Model)
+
+El fichero `pom.xml` es la base de la configuración de un proyecto Maven. Es un único fichero de configuración que contiene toda la información para construir un proyecto.
+
+El fichero `pom.xml` del proyecto anterior es el siguiente:
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dad.java</groupId>
+  <artifactId>PruebaMaven</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  
+  <name>PruebaMaven</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
+```
+
 ## Configurar la versión Java y la codificación del código fuente
 
-Para establecer la versión de Java utilizada para compilar nuestro código fuente, y la codificación en la que se encuentra, debemos añadir el siguiente fragmento al fichero de configuración de nuestro proyecto (**pom.xml**):
+Para establecer la versión de Java utilizada para compilar nuestro código fuente, y la codificación en la que se encuentra, debemos añadir el siguiente fragmento al fichero de configuración de nuestro proyecto (`pom.xml`):
 
 ```xml
 <properties>
@@ -123,6 +155,40 @@ Para establecer la versión de Java utilizada para compilar nuestro código fuen
 ```
 
 > En el ejemplo anterior se está usando Java 14 para compilar y UTF-8 como codificación.
+
+Aplicado al proyecto de ejemplo, su fichero `pom.xml` quedaría de la siguiente manera:
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dad.java</groupId>
+  <artifactId>PruebaMaven</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  
+  <name>PruebaMaven</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <maven.compiler.target>14</maven.compiler.target>
+    <maven.compiler.source>14</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
+```
 
 ## Compilar el proyecto
 
@@ -156,7 +222,7 @@ Mostrando una salida como la siguiente:
 [INFO] ------------------------------------------------------------------------
 ```
 
-Todos los ficheros generados por Maven (incluidos los **.class**) se guardan en el directorio **target**:
+Todos los ficheros generados por Maven (incluidos los `.class`) se guardan en el directorio `target`:
 
 ```bash
 PruebaMaven
@@ -193,7 +259,7 @@ PruebaMaven
 
 ## Convertir en un proyecto Eclipse
 
-Para poder importar el proyecto en Eclipse, podemos importarlo como un proyecto Maven directamente, o convertirlo primero (creando los ficheros **.project** y **.classpath**). Para esto último debemos ejecutar el siguiente comando en la raíz del proyecto (donde está el fichero **pom.xml**):
+Para poder importar el proyecto en Eclipse, podemos importarlo como un proyecto Maven directamente, o convertirlo primero (creando los ficheros `.project` y `.classpath`). Para esto último debemos ejecutar el siguiente comando en la raíz del proyecto (donde está el fichero `pom.xml`):
 
 ```bash
 mvn eclipse:eclipse
@@ -249,9 +315,9 @@ PruebaMaven
                         AppTest.java
 ```
 
-## Configurar el proyecto para su ejecución
+## Ejecutar un proyecto
 
-Para poder ejecutar nuestro proyecto con Maven debemos indicar la clase principal del proyecto (clase con método `main`) del siguiente modo:
+Para poder ejecutar nuestro proyecto con Maven debemos añadir la propiedad `exec.mainClass` al fichero `pom.xml` indicando cuál es la clase principal del proyecto (clase con método `main`):
 
 ```xml
 <properties>
@@ -259,7 +325,7 @@ Para poder ejecutar nuestro proyecto con Maven debemos indicar la clase principa
 </properties>
 ```
 
-> Debemos indicar la ruta completa a la clase (paquete y nombre de la clase, separados por puntos, sin incluir ".class" ni ".java"). Esa clase debe tener un método `main`.
+> Debemos indicar la ruta completa a la clase (paquete y nombre de la clase, separados por puntos, sin incluir `.class` ni `.java`). Destacar que dicha clase debe contener un método `main`.
 
 Y ejecutarlo con el siguiente comando:
 
