@@ -182,7 +182,7 @@ Aplicado al proyecto de ejemplo, su fichero `pom.xml` quedaría de la siguiente 
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
