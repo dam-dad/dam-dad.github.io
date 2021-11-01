@@ -351,3 +351,11 @@ Hello World!
 [INFO] Finished at: 2020-10-04T11:40:35+01:00
 [INFO] ------------------------------------------------------------------------
 ```
+
+## Comprobar que librerías pueden actualizarse
+
+Si queremos saber para qué librerías de nuestro proyecto existen versiones más actuales a las que estamos usando, podemos ejecutar el siguiente comando:
+
+```bash
+mvn versions:display-dependency-updates
+```
