@@ -4,11 +4,11 @@ Esta guía explica cómo preparar un entorno de desarrollo Java en GNU/Linux des
 
 Éste es el software que se va a instalar a continuación:
 
-- AdoptOpenJDK 14
+- OpenJDK
 - Eclipse for Java developers
 - Maven
 - Git
-- Typora
+- MarkText
 
 ## Instalar el gestor de paquetes SDKMAN!
 
@@ -24,21 +24,21 @@ curl -s "https://get.sdkman.io" | bash
 
 > Es necesario abrir un terminal nuevo para poder empezar a utilizar el comando `sdk`.
 
-## Instalar AdoptOpenJDK
+## Instalar JDK
 
-Para instalar la versión 14 de **AdoptOpenJDK**, abre un terminal y ejecuta el siguiente comando:
+Para instalar la última versión de **JDK**, abre un terminal y ejecuta el siguiente comando:
 
 ```bash
-sdk install java 14.0.2.j9-adpt
+sdk install java
 ```
 
 > Si quieres instalar una versión diferente consulta las versiones disponibles mediante el siguiente comando:
->
+> 
 > ```bash
 > sdk list java
 > ```
 
-## Instalar Eclipse 
+## Instalar Eclipse
 
 Descargar la última versión de Eclipse for Java developers (en este caso es **2020-09-R**):
 
@@ -52,7 +52,7 @@ Extraer Eclipse del fichero descargado antes y moverlo a `/opt`:
 
 ```bash
 tar xvfz eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz
-sudo mv eclipe /opt
+sudo mv eclipse /opt
 ```
 
 Establecer a `root` como propietario y cambiar los permisos:
@@ -98,7 +98,7 @@ Para instalar la última versión de **Maven**, abre un terminal y ejecuta el si
 sdk install maven
 ```
 
-## Instalar Git 
+## Instalar Git
 
 Para instalar la **Git**, abre un terminal y ejecuta el siguiente comando:
 
@@ -106,18 +106,17 @@ Para instalar la **Git**, abre un terminal y ejecuta el siguiente comando:
 sudo apt install -y git
 ```
 
-## Instalar Typora
+## Instalar MarkText
 
 Abre un terminal y ejecuta los siguientes comando para instalarlo:
 
 ```bash
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-sudo apt-get update
-sudo apt-get install typora
+wget https://github.com/marktext/marktext/releases/latest/download/marktext-x86_64.AppImage
 ```
 
-## Referencias
+Y ahora solo tenemos que ejecutar el **AppImage** descargado.
+
+## ## Referencias
 
 - [SDKMAN!](https://sdkman.io/)
-- [Typora](https://typora.io/#linux)
+- [MarkText](https://marktext.app/)

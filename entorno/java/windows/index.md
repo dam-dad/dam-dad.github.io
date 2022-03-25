@@ -4,12 +4,12 @@ A continuación se explica como preparar tu sistema Windows de forma rápida y s
 
 Las herramientas que vamos a necesitar son las siguientes:
 
-- AdoptOpenJDK 14
+- OpenJDK
 - Eclipse for Java developers
 - Maven
 - Git
 - GitHub Desktop
-- Typora
+- MarkText
 
 ## Instalar Chocolatey
 
@@ -28,10 +28,10 @@ Instalamos el Java Development Kit (JDK), necesario para programar con Java. En 
 Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 
 ```powershell
-choco install -y adoptopenjdk14
+choco install -y temurin
 ```
 
-> Si instalamos el paquete `adoptopenjdk` (sin concatenarle el número de versión de Java), se instalará la última versión disponible.
+> Esto instalará la última versión del OpenJDK [Temurin](https://adoptium.net/).
 
 ## Instalar Eclipse for Java developers
 
@@ -75,14 +75,14 @@ Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 choco install -y github-desktop
 ```
 
-## Instalar Typora
+## Instalar Mark Text
 
-**typora** es un editor de Markdown disponible para múltiples plataformas. Markdown es un formato de texto sencillo para elaborar documentación acerca de nuestros proyectos.
+**Mark Text** es un editor de Markdown disponible para múltiples plataformas. Markdown es un formato de texto sencillo para elaborar documentación acerca de nuestros proyectos.
 
 Para instalarlo, abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 
 ```powershell
-choco install -y typora
+choco install -y marktext
 ```
 
 ## Referencias
@@ -92,4 +92,4 @@ choco install -y typora
 - [Eclipse downloads page](https://www.eclipse.org/downloads/).
 - [GitHub Desktop](https://desktop.github.com/).
 - [Sitio web oficial de Git](https://git-scm.com/).
-- [Typora](https://typora.io/).
+- [MarkText](https://marktext.app/).

@@ -4,12 +4,12 @@ Esta guía explica cómo preparar un entorno de desarrollo Java en Mac OS X desd
 
 Éste es el software que se va a instalar a continuación:
 
-- AdoptOpenJDK 14
+- OpenJDK
 - Eclipse for Java developers
 - Maven
 - Git
 - GitHub Desktop
-- Typora
+- MarkText
 
 ## Instalar el gestor de paquetes SDKMAN!
 
@@ -37,21 +37,21 @@ Para instalarlo abre un terminal y ejecuta el siguiente comando:
 
 > Durante el proceso de instalación se requiere intervención del usuario en algunos momentos.
 
-## Instalar AdoptOpenJDK
+## Instalar JDK
 
-Para instalar la versión 14 de **AdoptOpenJDK**, abre un terminal y ejecuta el siguiente comando:
+Para instalar la última versión **JDK**, abre un terminal y ejecuta el siguiente comando:
 
 ```bash
-sdk install java 14.0.2.j9-adpt
+sdk install java
 ```
 
 > Si quieres instalar una versión diferente consulta las versiones disponibles mediante el siguiente comando:
->
+> 
 > ```bash
 > sdk list java
 > ```
 
-## Instalar Eclipse 
+## Instalar Eclipse
 
 Para instalar la última versión de **Eclipse for Java developers**, abre un terminal y ejecuta el siguiente comando:
 
@@ -67,7 +67,7 @@ Para instalar la última versión de **Maven**, abre un terminal y ejecuta el si
 sdk install maven
 ```
 
-## Instalar Git 
+## Instalar Git
 
 Mac OS X ya dispone de **git**, pero si queremos disponer de una versión más reciente ejecutamos el siguiente comando en un terminal:
 
@@ -89,30 +89,30 @@ Y extraemos el contenido del fichero ZIP descargado en `/Applications`:
 unzip GitHubDesktop.zip -d /Applications
 ```
 
-## Instalar Typora
+## Instalar Mark Text
 
-Descargamos **Typora** ejecutando el siguiente comando en un terminal:
+Descargamos **Mark Text** ejecutando el siguiente comando en un terminal:
 
 ```bash
-curl -L -O https://typora.io/download/Typora.dmg
+curl -L -O https://github.com/marktext/marktext/releases/latest/download/marktext.dmg
 ```
 
-Abrimos la imagen DMG de Typora:
+Abrimos la imagen DMG:
 
 ```bash
-open ./Typora.dmg
+open ./marktext.dmg
 ```
 
-Instalamos Typora en **Aplicaciones**:
+Lo instalamos en **Applications**:
 
 ```bash
-cp -R /Volumes/Typora/Typora.app /Applications
+cp -R /Volumes/marktext/marktext.app /Applications
 ```
 
-Desmontamos la imagen de Typora:
+Desmontamos la imagen:
 
 ```bash
-umount /Volumes/Typora
+umount /Volumes/marktext
 ```
 
 ## Referencias
