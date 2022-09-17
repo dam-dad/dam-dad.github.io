@@ -35,15 +35,13 @@ choco install -y temurin
 
 ## Instalar Eclipse for Java developers
 
-Instalamos la edición de Eclipse para desarrolladores Java (Eclipse for Java developers), versión 2019.12.
+Instalamos la última versión de la edición de Eclipse para desarrolladores Java (Eclipse for Java developers).
 
 Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 
 ```powershell
-choco install -y eclipse-java-oxygen --version=2019.12
+choco install -y eclipse-java-oxygen
 ```
-
-> Si obviamos la versión (`--version=2019.12`) en el comando anterior, se instalará la última versión de Eclipse disponible.
 
 ## Instalar Maven
 
