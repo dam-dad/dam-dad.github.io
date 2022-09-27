@@ -19,9 +19,9 @@ La instalación de Maven varía de un sistema operativo a otro.
 
 Para saber cómo instalar Maven puede consultar el apartado **Instalar Maven** en las siguientes guías:
 
-- [Cómo preparar un entorno de desarrollo Java en GNU/Linux](https://dam-dad.github.io/entorno/desarrollo-java-linux/)
-- [Cómo preparar un entorno de desarrollo Java en Mac OS X](https://dam-dad.github.io/entorno/desarrollo-java-macos/)
-- [Cómo preparar un entorno de desarrollo Java en Windows](https://dam-dad.github.io/entorno/desarrollo-java-windows/)
+- [Cómo preparar un entorno de desarrollo Java en GNU/Linux](https://dam-dad.github.io/entorno/java/linux/)
+- [Cómo preparar un entorno de desarrollo Java en Mac OS X](https://dam-dad.github.io/entorno/java/macos/)
+- [Cómo preparar un entorno de desarrollo Java en Windows](https://dam-dad.github.io/entorno/java/windows/)
 
 Una vez instalado, ejecuta el siguiente comando en un terminal para conocer la versión de Maven disponible:
 ```bash
