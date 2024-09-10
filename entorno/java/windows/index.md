@@ -4,12 +4,12 @@ A continuación se explica como preparar tu sistema Windows de forma rápida y s
 
 Las herramientas que vamos a necesitar son las siguientes:
 
-- OpenJDK
-- Eclipse for Java developers
-- Maven
-- Git
-- GitHub Desktop
-- MarkText
+- **JDK (Java Development Kit)**
+- **JetBrains IntelliJ IDEA (Community Edition)** o **Eclipse for Java developers**
+- **Maven**
+- **Git**
+- **GitHub Desktop**
+- **MarkText**
 
 ## Instalar Chocolatey
 
@@ -23,7 +23,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## Instalar el JDK
 
-Instalamos el Java Development Kit (JDK), necesario para programar con Java. En este caso se va a instalar **AdoptOpenJDK**.
+Instalamos el Java Development Kit (JDK), necesario para programar con Java. En este caso se va a instalar **Eclipse Temurin (JDK 21+)**.
 
 Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
 
@@ -32,6 +32,16 @@ choco install -y temurin
 ```
 
 > Esto instalará la última versión del OpenJDK [Temurin](https://adoptium.net/).
+
+## Instalar JetBrains IntelliJ IDEA (Community Edition)
+
+Instalamos la última versión de la edición Community de IntelliJ:
+
+Abre **PowerShell** como Administrador y ejecuta el siguiente comando:
+
+```powershell
+choco install -y intellijidea-community
+```
 
 ## Instalar Eclipse for Java developers
 
@@ -87,6 +97,7 @@ choco install -y marktext
 
 - [Installing Chocolatey](https://chocolatey.org/install).
 - [Chocolatey packages gallery](https://chocolatey.org/packages).
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 - [Eclipse downloads page](https://www.eclipse.org/downloads/).
 - [GitHub Desktop](https://desktop.github.com/).
 - [Sitio web oficial de Git](https://git-scm.com/).
