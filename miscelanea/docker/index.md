@@ -14,6 +14,10 @@ Una **imagen** es como una **plantilla** o **molde** que define qué hay dentro:
 
 El **contenedor** es la **instancia en ejecución** de esa imagen. Puedes tener varios contenedores corriendo a partir de la misma imagen, cada uno aislado, en la misma máquina 😯.
 
+### 🏗️ ¿Cómo funciona Docker por dentro?
+
+![how docker works](https://openclipart.org/download/226503/docker-architecture.svg)
+
 ### 🫤 ¿Y para qué me sirve a mí eso?
 
 Pues para nada, a menos que quieras:
@@ -39,6 +43,8 @@ Te explico:
 
 Una **máquina virtual (MV)** incluye un sistema operativo completo, lo que la hace pesada y lenta de arrancar. Un **contenedor**, en cambio, comparte el kernel del sistema operativo del host, por lo que es mucho más ligero y rápido.
 
+![docker vs vm](https://upload.wikimedia.org/wikipedia/commons/0/0a/Docker-containerized-and-vm-transparent-bg.png)
+
 ### 🧩 Dame un ejemplo
 
 Imagina que tienes una app en **Node.js**. Normalmente tendrías que instalar Node, configurar dependencias, versiones, etc.
@@ -53,13 +59,13 @@ Maravilloso, ¿no?
 
 > ℹ️ Docker hace que tus apps viajen en contenedores portátiles, ligeros y listos para funcionar igual en cualquier sitio.
 
-## Instalación
+## Instalación de Docker
 
 ### ¿Qué necesito?
 
 - Tener la virtualización habilitada (Intel VT-x/AMD-V) en BIOS/UEFI.
 - En Windows y macOS: Docker Desktop.
-- En Linux: Docker Engine.
+- En Linux: Docker Engine (docker-ce).
 
 ### Windows (Chocolatey)
 
@@ -91,9 +97,9 @@ brew install --cask docker
 
 Luego inicia la app Docker y valida con `docker version`.
 
-### Linux
+> ⚠️ Esta parte está sin probar, ya que soy pobre y no tengo macOS. Así que si alguien lo prueba y ve que hay que cambiar algo, que haga un **pull request**.
 
-#### Debian/Ubuntu
+### Linux (Debian/Ubuntu)
 
 Vamos a hacer la instalación desde los repositorios oficiales de Docker.
 
@@ -135,7 +141,9 @@ Para verificar que Docker se ha instalado correctamente, ejecuta:
 docker version
 ```
 
-## Primeros pasos
+![](images/index_img_2025-09-22-20-05-01.png)
+
+## Docker CLI (controlando Docker desde la terminal)
 
 ### Hola mundo 
 
@@ -144,6 +152,8 @@ Para comprobar que todo funciona correctamente, podemos ejecutar iniciar un cont
 ```bash
 docker run --rm hello-world
 ```
+
+![](images/index_img_2025-09-22-20-27-50.png)
 
 > ℹ️ La opción `--rm` indica que el contenedor se elimine automáticamente al finalizar.
 
@@ -156,6 +166,8 @@ Ahora vamos a lanzar un contenedor interactivo con Ubuntu 22.04:
 ```bash
 docker run -it --name ubuntu ubuntu:22.04 bash
 ```
+
+![](images/index_img_2025-09-22-20-28-47.png)
 
 > ℹ️ La opción `-it` indica que queremos una terminal interactiva, `--name` asigna un nombre al contenedor y `bash` es el comando que se ejecuta al iniciar.
 
@@ -175,17 +187,55 @@ docker pull ubuntu:22.04   # descargar imagen
 docker rmi <imagen>        # eliminar imagen
 ```
 
+![](images/index_img_2025-09-22-20-33-39.png)
+
+### Buscar imágenes en Docker Hub
+
+Docker Hub es el registro público de imágenes de Docker. Puedes buscar imágenes con:
+
+```bash
+docker search nginx
+```
+
+![](images/index_img_2025-09-22-20-24-41.png)
+
+O también puedes buscarlas desde Docker Desktop:
+
+![](images/index_img_2025-09-22-20-27-12.png)
+
+> ℹ️ Las immágenes oficiales tienen el prefijo `library/`.
+
 ### Puertos, volúmenes y redes
 
 ```bash
 docker run -d -p 8080:80 nginx            # exponer puerto
 
-docker run -d -v $(pwd)/data:/data busybox \
+docker run -d -v ./data:/data busybox \
   sh -c "while true; do date >> /data/log.txt; sleep 5; done"
 
 # Red nombrada
 docker network create mi-red
 ```
+
+## Docker Desktop (controlando Docker desde la GUI)
+
+**Docker Desktop** incluye Docker Engine, Docker CLI, Docker Compose, una interfaz gráfica para gestionar contenedores e imágenes, integración con WSL 2 (en Windows), y herramientas adicionales como Docker Compose V2 y configuraciones de red/volúmenes. Es un paquete completo para Windows y macOS.
+
+![](images/index_img_2025-09-22-20-13-42.png)
+
+Desde la interfaz gráfica puedes:
+- Ver y gestionar contenedores, imágenes, volúmenes y redes.
+- Encontrar y descargar imágenes desde Docker Hub.
+- Configurar recursos (CPU, memoria, disco).
+- Acceder a la terminal integrada.
+- Configurar integraciones con WSL 2 (Windows).
+- Actualizar Docker Desktop y sus componentes.
+- Acceder a documentación y soporte.
+- Configurar proxies y certificados.
+- Gestionar preferencias de inicio y actualizaciones automáticas.
+- Ver logs y diagnósticos.
+- Integrar con Kubernetes (opcional).
+- Y más...
 
 ## Docker Compose (v2)
 
@@ -222,6 +272,7 @@ Crea `compose.yaml` en una carpeta vacía y ejecuta `docker compose up -d`.
 ```yaml
 services:
   db:
+    container_name: mysql-db
     image: mysql:latest
     environment:
       MYSQL_DATABASE: wordpress
@@ -236,6 +287,7 @@ services:
       timeout: 5s
       retries: 5
   wordpress:
+    container_name: wordpress-site
     image: wordpress:latest
     depends_on:
       db:
@@ -254,7 +306,7 @@ volumes:
   wp_data:
 ```
 
-- Acceso: http://localhost:8080
+Una vez hemos levantado los servicios, podemos acceder a WordPress en: [http://localhost:8080](http://localhost:8080).
 
 ### 3) SQL Server 2022 (Linux)
 
