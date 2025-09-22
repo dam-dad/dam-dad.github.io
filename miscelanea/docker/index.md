@@ -45,7 +45,13 @@ Una **máquina virtual (MV)** incluye un sistema operativo completo, lo que la h
 
 ![docker vs vm](https://upload.wikimedia.org/wikipedia/commons/0/0a/Docker-containerized-and-vm-transparent-bg.png)
 
-### 🧩 Dame un ejemplo
+### 😯 ¡Ños! ¿Y dónde puedo encontrar imágenes para lanzar mis contenedores?
+
+Las puedes buscar en [Docker Hub](https://hub.docker.com), el registro público de imágenes de Docker.
+
+> ℹ️ Las imágenes oficiales las puedes encontrar buscando por el prefijo `library/`: nginx, redis, mysql, postgres, ubuntu, etc.
+
+### 🧩 Dame un ejemplito chachi
 
 Imagina que tienes una app en **Node.js**. Normalmente tendrías que instalar Node, configurar dependencias, versiones, etc.
 
@@ -61,11 +67,11 @@ Maravilloso, ¿no?
 
 ## Instalación de Docker
 
-### ¿Qué necesito?
+### ¿Qué necesito para usar Docker?
 
-- Tener la virtualización habilitada (Intel VT-x/AMD-V) en BIOS/UEFI.
-- En Windows y macOS: Docker Desktop.
-- En Linux: Docker Engine (docker-ce).
+- Tener la **virtualización habilitada** (Intel VT-x/AMD-V) en BIOS/UEFI.
+- En Windows y macOS: **Docker Desktop**.
+- En Linux: **Docker Engine** (docker-ce).
 
 ### Windows (Chocolatey)
 
@@ -75,13 +81,15 @@ Ejecuta el siguiente comando en PowerShell como administrador:
 choco install docker-desktop -y
 ```
 
-Es recomendable activar WSL 2 (Windows 10 2004+ / 11) de la siguiente manera: 
+Es recomendable activar **WSL 2** (Windows 10 2004+ / 11) de la siguiente manera: 
 
 ```powershell
 wsl --install
 ```
 
 Luego puedes abrir **Docker Desktop** y espera a que indique `Engine running` (esto indica que el servicio/motor de Docker se está ejecutando).
+
+![](images/index_img_2025-09-22-20-53-58.png)
 
 > ⚠️ Si el servicio no está iniciado en Windows, en PowerShell puedes arrancarlo con `Start-Service com.docker.service` (como administrador).
 
@@ -145,6 +153,8 @@ docker version
 
 ## Docker CLI (controlando Docker desde la terminal)
 
+Esto es lo básico para empezar a usar Docker desde la terminal, y te lo explico con ejemplos.
+
 ### Hola mundo 
 
 Para comprobar que todo funciona correctamente, podemos ejecutar iniciar un contenedor con la imagen `hello-world` (se descargará automáticamente de Docker Hub si no se ha descargado ya) y mostrará un mensaje de bienvenida:
@@ -171,7 +181,11 @@ docker run -it --name ubuntu ubuntu:22.04 bash
 
 > ℹ️ La opción `-it` indica que queremos una terminal interactiva, `--name` asigna un nombre al contenedor y `bash` es el comando que se ejecuta al iniciar.
 
+Es como si tuviéramos un Ubuntu dentro de un contenedor. Podemos instalar cosas, ejecutar comandos, etc., y más ligero que una máquina virtual.
+
 ### Gestión básica
+
+Comandos básicos para gestionar contenedores e imágenes:
 
 ```bash
 docker ps                  # contenedores en ejecución
@@ -248,10 +262,9 @@ docker compose logs -f   # seguir logs
 docker compose down      # parar y limpiar (mantiene volúmenes salvo --volumes)
 ```
 
-## ¿Dónde encontrar imágenes?
+### Vale máquina, pero ¿qué es un stack?
 
-- Docker Hub: https://hub.docker.com
-- Imágenes oficiales (prefijo `library/`): nginx, redis, mysql, postgres, ubuntu, etc.
+Un **stack** es un conjunto de servicios (contenedores) que trabajan juntos para formar una aplicación completa. Por ejemplo, una aplicación web puede consistir en un servidor web, una base de datos y un sistema de caché, cada uno ejecutándose en su propio contenedor. Docker Compose te permite definir y gestionar estos servicios como un solo conjunto.
 
 ## Ejemplos prácticos
 
