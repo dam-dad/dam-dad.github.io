@@ -336,7 +336,7 @@ volumes:
   mssql_data:
 ```
 
-- Conexión desde el host: `127.0.0.1,1433` (usuario `sa`). Cambia la contraseña.
+Conexión desde el host: `127.0.0.1,1433` (usuario `sa`). Cambia la contraseña.
 
 ### 4) Contenedor Windows (Server Core)
 
@@ -350,7 +350,7 @@ docker pull mcr.microsoft.com/windows/servercore:ltsc2022
 docker run -it --name win-core mcr.microsoft.com/windows/servercore:ltsc2022 powershell
 ```
 
-- Nota: la versión del host debe coincidir con la de la imagen (compatibilidad de kernel).
+> ⚠️ La versión del host debe coincidir con la de la imagen (compatibilidad de kernel).
 
 ## Construir imágenes propias
 
@@ -381,6 +381,6 @@ docker run -d -p 3000:3000 --name miapp miapp:1.0
 
 ## Recursos
 
-- Documentación: https://docs.docker.com
-- Docker Hub: https://hub.docker.com
-- Compose: https://docs.docker.com/compose/
+- [Documentación oficial de Docker](https://docs.docker.com)
+- [Documentación oficial de Docker Compose](https://docs.docker.com/compose/)
+- [Docker Hub (repositorio de imágenes)](https://hub.docker.com)
